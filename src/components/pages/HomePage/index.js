@@ -6,7 +6,6 @@ const HomePage = () => {
   return (
     <PageTemplate>
       <Menu />
-      This is working!
     </PageTemplate>
   )
 }

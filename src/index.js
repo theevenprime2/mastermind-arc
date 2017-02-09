@@ -8,6 +8,15 @@ import { useScroll } from 'react-router-scroll'
 import configureStore from 'store/configure'
 
 import routes from 'routes'
+import WebFont from 'webfontloader'
+
+WebFont.load({
+  google: {
+    families: ['Roboto:300,400,500,700', 'Material Icons']
+  }
+})
+
+import './styles.scss'
 
 const store = configureStore({}, browserHistory)
 const history = syncHistoryWithStore(browserHistory, store)
