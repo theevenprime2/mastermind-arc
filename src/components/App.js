@@ -1,5 +1,14 @@
 import React, { PropTypes } from 'react'
 import { injectGlobal } from 'styled-components'
+import WebFont from 'webfontloader'
+
+WebFont.load({
+  google: {
+    families: ['Roboto:300,400,500,700', 'Material Icons']
+  }
+})
+
+import '../../public/styles.scss';
 
 injectGlobal`
   body {
