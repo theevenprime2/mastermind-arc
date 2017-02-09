@@ -1,9 +1,9 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import Button from 'react-md/lib/Buttons'
 
-const FeatureList = ({ ...props }) => (
+const Menu = ({ ...props }) => (
   <Button raised label="Hello, World!" />
 )
 
-export default FeatureList
+export default Menu

@@ -8,7 +8,7 @@ WebFont.load({
   }
 })
 
-import '../../public/styles.scss';
+import '../../public/styles.scss'
 
 injectGlobal`
   body {

@@ -31,7 +31,7 @@ const config = {
   ],
   module: {
     rules: [
-      { test: /\.js$/,
+      { test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/
       },
@@ -63,7 +63,7 @@ const config = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
+          'css-loader?importLoaders=1',
           'postcss-loader'
         ]
       },
@@ -71,9 +71,9 @@ const config = {
         test: /\.s(a|c)ss$/,
         use: [
           'style-loader',
-          'css-loader',
+          'css-loader?importLoaders=2',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader?sourceMap&outputStyle=expanded'
         ]
        }
     ]
