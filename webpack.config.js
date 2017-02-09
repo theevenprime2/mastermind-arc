@@ -18,7 +18,7 @@ const config = {
     publicPath: '/'
   },
   resolve: {
-    modulesDirectories: ['src', 'node_modules']
+    modules: ['src', 'node_modules']
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -30,14 +30,52 @@ const config = {
     })
   ],
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-      { test: /\.png$/, loader: 'url?prefix=images/&limit=8000&mimetype=image/png' },
-      { test: /\.jpg$/, loader: 'url?prefix=images/&limit=8000&mimetype=image/jpeg' },
-      { test: /\.woff$/, loader: 'url?prefix=fonts/&limit=8000&mimetype=application/font-woff' },
-      { test: /\.ttf$/, loader: 'file?prefix=fonts/' },
-      { test: /\.eot$/, loader: 'file?prefix=fonts/' },
-      { test: /\.json$/, loader: 'json' }
+    rules: [
+      { test: /\.js$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.png$/,
+        use: 'url?prefix=images/&limit=8000&mimetype=image/png'
+      },
+      {
+        test: /\.jpg$/,
+        use: 'url?prefix=images/&limit=8000&mimetype=image/jpeg'
+      },
+      {
+        test: /\.woff$/,
+        use: 'url?prefix=fonts/&limit=8000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf$/,
+        use: 'file?prefix=fonts/'
+      },
+      {
+        test: /\.eot$/,
+        use: 'file?prefix=fonts/'
+      },
+      {
+        test: /\.json$/,
+        use: 'json'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+       }
     ]
   }
 }
