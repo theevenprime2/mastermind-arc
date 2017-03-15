@@ -7,6 +7,7 @@ import { HomePage } from 'components'
 const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
+    <Route path="/game" component={GamePage} />
   </Route>
 )
 
