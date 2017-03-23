@@ -1,8 +1,6 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import styled from 'styled-components'
-import Button from 'react-md/lib/Buttons'
 
-// react-md components do not play well with styled-components?
 const Wrapper = styled.div`
   > a {
     display: block;

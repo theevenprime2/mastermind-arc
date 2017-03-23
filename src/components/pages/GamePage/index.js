@@ -5,7 +5,7 @@ import { PageTemplate, Menu } from 'components'
 const GamePage = () => {
   return (
     <PageTemplate>
-      <Game />
+
     </PageTemplate>
   )
 }
